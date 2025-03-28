@@ -1,7 +1,3 @@
----
-title: "HAVij"
-output: github_document
----
 
 # HAVij
 
@@ -30,3 +26,37 @@ devtools::install_github("yourusername/HAVij")
 ## Usage
 1. The `HAVijALL` function performs overall association tests. At least one of these objects must be provided: `numeric_columns`, `independent_categorical_columns`, or `dependent_categorical_columns`.
 
+```r
+   HAVijALL(
+  file = inputdata,
+  numeric_columns = c(...),
+  independent_categorical_columns = c(...),
+  dependent_categorical_columns = c(...),
+  path = "path/to/destination"
+)
+```
+
+2. The `HAVijSPLIT` function performs association tests on subsets of your data based on one or more split columns. In addition to at least one of the three objects above, you must also provide the `split_columns` object.
+
+```r
+HAVijSPLIT(
+  file = inputdata,
+  numeric_columns = c(...),
+  independent_categorical_columns = c(...),
+  dependent_categorical_columns = c(...),
+  split_columns = c(...),
+  path = "path/to/destination"
+)
+```
+**Parameters:**
+- `file`: The input dataset.
+
+- `numeric_columns`: A vector of numeric column indices or names.
+
+- `independent_categorical_columns`: A vector of independent categorical column indices or names.
+
+- `dependent_categorical_columns`: A vector of dependent categorical column indices or names (if applicable).
+
+- `split_columns`: A vector of column indices or names used to split the data.
+
+- `path`: A destination path where the result CSV file will be saved.
