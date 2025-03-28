@@ -20,7 +20,7 @@ You can install the HAVij package from GitHub using `devtools`:
 ```r
 # Install devtools if not already installed
 install.packages("devtools")
-devtools::install_github("yourusername/HAVij")
+devtools::install_github("amirmaharati/HAVij")
 ```
 
 ## Usage
